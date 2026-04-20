@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme{
+    --color-backgrond:#F9F9F7;
+    --color-forground:#FFFFFF;
+    --color-main:#2C2F24;
+    --color-muted:#AD343E;
+    --color-topbar:#474747;
+    --font-primary:"DM Sans";
+    --color-hover_color: #B2E3FF;
+    --color-iconBG:#F9F9F71F
+
+}
+
+@utility container_auto{
+    @apply container mx-auto ;
+}
+@utility row{
+    @apply flex justify-between items-center;
+}
+@utility icons_topbar_right{
+    @apply w-[27.17px] h-[27.17px] flex justify-center items-center bg-iconBG rounded-full hover:bg-gray-500 transition-[.5s];
+}
+@utility topbar_icon{
+    @apply gap-[8px] items-center text-backgrond py-[10px] font-primary ;
+}
