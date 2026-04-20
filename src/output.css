@@ -168,29 +168,10 @@
   }
 }
 @layer utilities {
-  .container_auto {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-    margin-inline: auto;
-  }
   .icons_topbar_right {
     display: flex;
-    height: 27.17px;
-    width: 27.17px;
+    height: 15px;
+    width: 15px;
     align-items: center;
     justify-content: center;
     border-radius: calc(infinity * 1px);
@@ -203,6 +184,12 @@
         background-color: var(--color-gray-500);
       }
     }
+    @media (width >= 48rem) {
+      height: 27.17px;
+    }
+    @media (width >= 48rem) {
+      width: 27.17px;
+    }
   }
   .row {
     display: flex;
@@ -214,6 +201,9 @@
   }
   .h-\[13px\] {
     height: 13px;
+  }
+  .w-\[8px\] {
+    width: 8px;
   }
   .w-\[11px\] {
     width: 11px;
@@ -231,21 +221,80 @@
   .gap-\[5px\] {
     gap: 5px;
   }
-  .gap-\[25px\] {
-    gap: 25px;
+  .gap-\[15px\] {
+    gap: 15px;
   }
   .bg-topbar {
     background-color: var(--color-topbar);
   }
-  .px-\[150px\] {
-    padding-inline: 150px;
+  .px-\[5px\] {
+    padding-inline: 5px;
   }
-  .text-\[16px\] {
-    font-size: 16px;
+  .px-\[10px\] {
+    padding-inline: 10px;
+  }
+  .text-\[8px\] {
+    font-size: 8px;
   }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .md\:h-\[13px\] {
+    @media (width >= 48rem) {
+      height: 13px;
+    }
+  }
+  .md\:w-\[13px\] {
+    @media (width >= 48rem) {
+      width: 13px;
+    }
+  }
+  .md\:gap-\[25px\] {
+    @media (width >= 48rem) {
+      gap: 25px;
+    }
+  }
+  .md\:px-\[50px\] {
+    @media (width >= 48rem) {
+      padding-inline: 50px;
+    }
+  }
+  .md\:text-\[12px\] {
+    @media (width >= 48rem) {
+      font-size: 12px;
+    }
+  }
+  .lg\:container_auto {
+    @media (width >= 64rem) {
+      width: 100%;
+      @media (width >= 40rem) {
+        max-width: 40rem;
+      }
+      @media (width >= 48rem) {
+        max-width: 48rem;
+      }
+      @media (width >= 64rem) {
+        max-width: 64rem;
+      }
+      @media (width >= 80rem) {
+        max-width: 80rem;
+      }
+      @media (width >= 96rem) {
+        max-width: 96rem;
+      }
+      margin-inline: auto;
+    }
+  }
+  .lg\:px-\[150px\] {
+    @media (width >= 64rem) {
+      padding-inline: 150px;
+    }
+  }
+  .lg\:text-\[16px\] {
+    @media (width >= 64rem) {
+      font-size: 16px;
+    }
   }
 }
 @property --tw-font-weight {

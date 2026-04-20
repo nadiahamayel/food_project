@@ -19,7 +19,7 @@
     @apply flex justify-between items-center;
 }
 @utility icons_topbar_right{
-    @apply w-[27.17px] h-[27.17px] flex justify-center items-center bg-iconBG rounded-full hover:bg-gray-500 transition-[.5s];
+    @apply w-[15px] h-[15px] md:w-[27.17px] md:h-[27.17px] flex justify-center items-center bg-iconBG rounded-full hover:bg-gray-500 transition-[.5s];
 }
 @utility topbar_icon{
     @apply gap-[8px] items-center text-backgrond py-[10px] font-primary ;
