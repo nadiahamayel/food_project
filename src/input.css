@@ -6,9 +6,12 @@
     --color-main:#2C2F24;
     --color-muted:#AD343E;
     --color-topbar:#474747;
+    --color-redbutton:#AD343E;
     --font-primary:"DM Sans";
+    --font-fortext:"Playfair Display";
     --color-hover_color: #B2E3FF;
     --color-iconBG:#F9F9F71F
+    
 
 }
 @layer base{
@@ -18,6 +21,7 @@
     body{
         font-family: var(--font-primary)
     }
+   
 }
 
 @utility container_auto{
@@ -37,4 +41,13 @@
 }
 @utility list_text{
     @apply font-medium text-[16px] leading-[24px] text-main;
+}
+@utility absolute_hero{
+    @apply absolute inset-0 flex flex-col gap-[15px] lg:gap-[30px] text-main lg:w-[50%]  mx-auto text-center items-center justify-center;
+}
+@utility button{
+    @apply font-bold rounded-[118px] text-[10px] md:text-[16px]  border-[1.5px] text-main  py-[2px] px-[10px] md:py-[12px] md:px-[24px];
+}
+@utility button_hover{
+    @apply  hover:bg-[#3f413d86] transition-[.5s] ;
 }
