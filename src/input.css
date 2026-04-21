@@ -11,6 +11,14 @@
     --color-iconBG:#F9F9F71F
 
 }
+@layer base{
+    img , li {
+        cursor: pointer;
+    }
+    body{
+        font-family: var(--font-primary)
+    }
+}
 
 @utility container_auto{
     @apply container mx-auto ;
@@ -23,4 +31,10 @@
 }
 @utility topbar_icon{
     @apply gap-[8px] items-center text-backgrond py-[10px] font-primary ;
+}
+@utility list_hover{
+    @apply w-[65px] h-[20px] md:w-[77px] md:h-[32px] flex justify-center items-center rounded-[32px] hover:bg-[#DBDFD0] transition-[.5s] py-[4px] px-[16px];
+}
+@utility list_text{
+    @apply font-medium text-[16px] leading-[24px] text-main;
 }
