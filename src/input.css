@@ -10,7 +10,9 @@
     --font-primary:"DM Sans";
     --font-fortext:"Playfair Display";
     --color-hover_color: #B2E3FF;
-    --color-iconBG:#F9F9F71F
+    --color-menup:#414536;
+    --color-iconBG:#F9F9F71F;
+    
     
 
 }
@@ -21,6 +23,26 @@
     body{
         font-family: var(--font-primary)
     }
+    h2{
+        font-family: "Playfair Display";
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 40px;
+        line-height: 60.5px;
+         }
+    h3{
+          font-family: "DM Sans";
+          font-weight: 700;
+          font-style: Bold;
+          font-size: 20px;
+          line-height: 30px;
+         letter-spacing: -3%;
+         text-align: center;
+
+    }  
+    p{
+
+    }  
    
 }
 
@@ -50,4 +72,10 @@
 }
 @utility button_hover{
     @apply  hover:bg-[#3f413d86] transition-[.5s] ;
+}
+@utility menu_p{
+    @apply font-[400] text-[16px] leading-[24px] text-menup;
+}
+@utility menu_items{
+    @apply flex flex-col gap-[30px] text-center items-center rounded-[12px] py-[40px] px-[34px] border-[1.5px];
 }

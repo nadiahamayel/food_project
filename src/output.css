@@ -19,6 +19,7 @@
     --color-backgrond: #F9F9F7;
     --color-forground: #FFFFFF;
     --color-main: #2C2F24;
+    --color-muted: #AD343E;
     --color-topbar: #474747;
     --color-redbutton: #AD343E;
     --font-primary: "DM Sans";
@@ -202,6 +203,24 @@
   .relative {
     position: relative;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .list_hover {
     display: flex;
     height: 20px;
@@ -249,6 +268,18 @@
       width: 27.17px;
     }
   }
+  .menu_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 12px;
+    border-style: var(--tw-border-style);
+    border-width: 1.5px;
+    padding-inline: 34px;
+    padding-block: 40px;
+    text-align: center;
+  }
   .row {
     display: flex;
     align-items: center;
@@ -260,8 +291,14 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
   }
   .h-\[8px\] {
     height: 8px;
@@ -314,6 +351,15 @@
   .w-full {
     width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
   .topbar_icon {
     align-items: center;
     gap: 8px;
@@ -332,6 +378,9 @@
   }
   .gap-\[15px\] {
     gap: 15px;
+  }
+  .gap-\[30px\] {
+    gap: 30px;
   }
   .button {
     border-radius: 118px;
@@ -355,6 +404,10 @@
   }
   .rounded-\[118px\] {
     border-radius: 118px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
@@ -385,11 +438,20 @@
   .px-\[15px\] {
     padding-inline: 15px;
   }
+  .py-\[5px\] {
+    padding-block: 5px;
+  }
   .py-\[8px\] {
     padding-block: 8px;
   }
-  .py-\[20px\] {
-    padding-block: 20px;
+  .py-\[60px\] {
+    padding-block: 60px;
+  }
+  .py-\[90px\] {
+    padding-block: 90px;
+  }
+  .text-center {
+    text-align: center;
   }
   .list_text {
     font-size: 16px;
@@ -405,16 +467,27 @@
   .text-\[12px\] {
     font-size: 12px;
   }
-  .text-\[28px\] {
-    font-size: 28px;
+  .text-\[16px\] {
+    font-size: 16px;
+  }
+  .text-\[24px\] {
+    font-size: 24px;
   }
   .leading-\[12px\] {
     --tw-leading: 12px;
     line-height: 12px;
   }
+  .leading-\[24px\] {
+    --tw-leading: 24px;
+    line-height: 24px;
+  }
   .leading-\[30px\] {
     --tw-leading: 30px;
     line-height: 30px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
@@ -425,6 +498,16 @@
   }
   .text-main {
     color: var(--color-main);
+  }
+  .text-muted {
+    color: var(--color-muted);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .md\:h-\[13px\] {
     @media (width >= 48rem) {
@@ -469,6 +552,11 @@
   .md\:py-\[12px\] {
     @media (width >= 48rem) {
       padding-block: 12px;
+    }
+  }
+  .md\:py-\[20px\] {
+    @media (width >= 48rem) {
+      padding-block: 20px;
     }
   }
   .md\:text-\[12px\] {
@@ -517,6 +605,26 @@
         max-width: 96rem;
       }
       margin-inline: auto;
+    }
+  }
+  .lg\:container {
+    @media (width >= 64rem) {
+      width: 100%;
+      @media (width >= 40rem) {
+        max-width: 40rem;
+      }
+      @media (width >= 48rem) {
+        max-width: 48rem;
+      }
+      @media (width >= 64rem) {
+        max-width: 64rem;
+      }
+      @media (width >= 80rem) {
+        max-width: 80rem;
+      }
+      @media (width >= 96rem) {
+        max-width: 96rem;
+      }
     }
   }
   .lg\:block {
@@ -605,6 +713,22 @@
   body {
     font-family: var(--font-primary);
   }
+  h2 {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 40px;
+    line-height: 60.5px;
+  }
+  h3 {
+    font-family: "DM Sans";
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -3%;
+    text-align: center;
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -619,12 +743,18 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-leading: initial;
+      --tw-outline-style: solid;
     }
   }
 }
