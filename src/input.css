@@ -43,10 +43,10 @@
     @apply font-medium text-[16px] leading-[24px] text-main;
 }
 @utility absolute_hero{
-    @apply absolute inset-0 flex flex-col gap-[15px] lg:gap-[30px] text-main lg:w-[50%]  mx-auto text-center items-center justify-center;
+    @apply absolute inset-0 flex flex-col gap-[15px] lg:gap-[30px] text-main w-[95%] md:w-[80%] lg:w-[60%] xl:w-[50%]  mx-auto text-center items-center justify-center;
 }
 @utility button{
-    @apply font-bold rounded-[118px] text-[10px] md:text-[16px]  border-[1.5px] text-main  py-[2px] px-[10px] md:py-[12px] md:px-[24px];
+    @apply font-bold rounded-[118px] text-[10px] md:text-[16px]  border-[1.5px] text-main  py-[10px] px-[14px] md:py-[12px] md:px-[24px];
 }
 @utility button_hover{
     @apply  hover:bg-[#3f413d86] transition-[.5s] ;
