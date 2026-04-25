@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-800: oklch(47.3% 0.137 46.201);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --spacing: 0.25rem;
     --font-weight-normal: 400;
@@ -23,6 +24,7 @@
     --color-topbar: #474747;
     --color-redbutton: #AD343E;
     --font-primary: "DM Sans";
+    --color-menup: #414536;
     --color-iconBG: #F9F9F71F;
   }
 }
@@ -222,24 +224,6 @@
     }
     margin-inline: auto;
   }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
-  }
   .list_hover {
     display: flex;
     height: 20px;
@@ -359,6 +343,12 @@
   .w-\[25px\] {
     width: 25px;
   }
+  .w-\[80\%\] {
+    width: 80%;
+  }
+  .w-\[80\] {
+    width: 80;
+  }
   .w-\[100\%\] {
     width: 100%;
   }
@@ -380,8 +370,11 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .topbar_icon {
     align-items: center;
@@ -389,9 +382,6 @@
     padding-block: 10px;
     font-family: var(--font-primary);
     color: var(--color-backgrond);
-  }
-  .items-center {
-    align-items: center;
   }
   .gap-\[3px\] {
     gap: 3px;
@@ -408,8 +398,8 @@
   .gap-\[20px\] {
     gap: 20px;
   }
-  .gap-\[30px\] {
-    gap: 30px;
+  .gap-\[24px\] {
+    gap: 24px;
   }
   .button {
     border-radius: 118px;
@@ -452,6 +442,12 @@
       }
     }
   }
+  .bg-amber-800 {
+    background-color: var(--color-amber-800);
+  }
+  .bg-backgrond {
+    background-color: var(--color-backgrond);
+  }
   .bg-redbutton {
     background-color: var(--color-redbutton);
   }
@@ -464,14 +460,17 @@
   .px-\[5px\] {
     padding-inline: 5px;
   }
-  .px-\[10px\] {
-    padding-inline: 10px;
-  }
   .px-\[15px\] {
     padding-inline: 15px;
   }
   .px-\[20px\] {
     padding-inline: 20px;
+  }
+  .px-\[60px\] {
+    padding-inline: 60px;
+  }
+  .px-\[90px\] {
+    padding-inline: 90px;
   }
   .py-\[5px\] {
     padding-block: 5px;
@@ -482,20 +481,20 @@
   .py-\[30px\] {
     padding-block: 30px;
   }
+  .py-\[40px\] {
+    padding-block: 40px;
+  }
   .py-\[50px\] {
     padding-block: 50px;
   }
   .py-\[60px\] {
     padding-block: 60px;
   }
-  .py-\[70px\] {
-    padding-block: 70px;
-  }
-  .py-\[90px\] {
-    padding-block: 90px;
-  }
   .text-center {
     text-align: center;
+  }
+  .font-primary {
+    font-family: var(--font-primary);
   }
   .list_text {
     font-size: 16px;
@@ -504,12 +503,6 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
     color: var(--color-main);
-  }
-  .text-\[0px\] {
-    font-size: 0px;
-  }
-  .text-\[1px\] {
-    font-size: 1px;
   }
   .text-\[8px\] {
     font-size: 8px;
@@ -523,8 +516,8 @@
   .text-\[14px\] {
     font-size: 14px;
   }
-  .text-\[16px\] {
-    font-size: 16px;
+  .text-\[18px\] {
+    font-size: 18px;
   }
   .text-\[20px\] {
     font-size: 20px;
@@ -536,9 +529,21 @@
     --tw-leading: 12px;
     line-height: 12px;
   }
+  .leading-\[20px\] {
+    --tw-leading: 20px;
+    line-height: 20px;
+  }
   .leading-\[24px\] {
     --tw-leading: 24px;
     line-height: 24px;
+  }
+  .leading-\[28\] {
+    --tw-leading: 28;
+    line-height: 28;
+  }
+  .leading-\[28px\] {
+    --tw-leading: 28px;
+    line-height: 28px;
   }
   .leading-\[30px\] {
     --tw-leading: 30px;
@@ -552,11 +557,17 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
+  .text-\[18\] {
+    color: 18;
+  }
   .text-forground {
     color: var(--color-forground);
   }
   .text-main {
     color: var(--color-main);
+  }
+  .text-menup {
+    color: var(--color-menup);
   }
   .text-muted {
     color: var(--color-muted);
@@ -567,41 +578,6 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .sm\:py-\[0px\] {
-    @media (width >= 40rem) {
-      padding-block: 0px;
-    }
-  }
-  .sm\:py-\[60px\] {
-    @media (width >= 40rem) {
-      padding-block: 60px;
-    }
-  }
-  .sm\:py-\[70px\] {
-    @media (width >= 40rem) {
-      padding-block: 70px;
-    }
-  }
-  .sm\:py-\[80px\] {
-    @media (width >= 40rem) {
-      padding-block: 80px;
-    }
-  }
-  .sm\:py-\[90px\] {
-    @media (width >= 40rem) {
-      padding-block: 90px;
-    }
-  }
-  .sm\:text-\[12px\] {
-    @media (width >= 40rem) {
-      font-size: 12px;
-    }
-  }
-  .sm\:text-\[12\] {
-    @media (width >= 40rem) {
-      color: 12;
-    }
   }
   .md\:h-\[13px\] {
     @media (width >= 48rem) {
@@ -673,19 +649,9 @@
       padding-block: 90px;
     }
   }
-  .md\:text-\[1px\] {
-    @media (width >= 48rem) {
-      font-size: 1px;
-    }
-  }
   .md\:text-\[12px\] {
     @media (width >= 48rem) {
       font-size: 12px;
-    }
-  }
-  .md\:text-\[14px\] {
-    @media (width >= 48rem) {
-      font-size: 14px;
     }
   }
   .md\:text-\[16px\] {
@@ -696,11 +662,6 @@
   .md\:text-\[18px\] {
     @media (width >= 48rem) {
       font-size: 18px;
-    }
-  }
-  .md\:text-\[20px\] {
-    @media (width >= 48rem) {
-      font-size: 20px;
     }
   }
   .md\:text-\[30px\] {
@@ -725,11 +686,6 @@
       line-height: 70px;
     }
   }
-  .md\:text-\[px\] {
-    @media (width >= 48rem) {
-      color: px;
-    }
-  }
   .lg\:container_auto {
     @media (width >= 64rem) {
       width: 100%;
@@ -751,26 +707,6 @@
       margin-inline: auto;
     }
   }
-  .lg\:container {
-    @media (width >= 64rem) {
-      width: 100%;
-      @media (width >= 40rem) {
-        max-width: 40rem;
-      }
-      @media (width >= 48rem) {
-        max-width: 48rem;
-      }
-      @media (width >= 64rem) {
-        max-width: 64rem;
-      }
-      @media (width >= 80rem) {
-        max-width: 80rem;
-      }
-      @media (width >= 96rem) {
-        max-width: 96rem;
-      }
-    }
-  }
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
@@ -786,24 +722,9 @@
       width: 70%;
     }
   }
-  .lg\:grid-cols-1 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-  }
-  .lg\:grid-cols-2 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .lg\:grid-cols-4 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
   .lg\:px-\[150px\] {
@@ -816,14 +737,9 @@
       padding-block: 40px;
     }
   }
-  .lg\:py-\[90px\] {
+  .lg\:py-\[120px\] {
     @media (width >= 64rem) {
-      padding-block: 90px;
-    }
-  }
-  .lg\:text-\[0px\] {
-    @media (width >= 64rem) {
-      font-size: 0px;
+      padding-block: 120px;
     }
   }
   .lg\:text-\[16px\] {
@@ -839,11 +755,6 @@
   .lg\:text-\[40px\] {
     @media (width >= 64rem) {
       font-size: 40px;
-    }
-  }
-  .lg\:text-\[60px\] {
-    @media (width >= 64rem) {
-      font-size: 60px;
     }
   }
   .lg\:text-\[70px\] {
@@ -907,7 +818,7 @@
     font-weight: 500;
     font-style: Medium;
     font-size: 40px;
-    line-height: 60.5px;
+    line-height: 50.5px;
   }
   h3 {
     font-family: "DM Sans";
