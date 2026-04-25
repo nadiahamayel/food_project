@@ -7,7 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-800: oklch(47.3% 0.137 46.201);
+    --color-amber-950: oklch(27.9% 0.077 45.635);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --spacing: 0.25rem;
     --font-weight-normal: 400;
@@ -331,8 +333,14 @@
   .h-\[55px\] {
     height: 55px;
   }
+  .h-\[80\%\] {
+    height: 80%;
+  }
   .h-full {
     height: 100%;
+  }
+  .w-\[\%\] {
+    width: %;
   }
   .w-\[8px\] {
     width: 8px;
@@ -348,6 +356,9 @@
   }
   .w-\[80\] {
     width: 80;
+  }
+  .w-\[95\%\] {
+    width: 95%;
   }
   .w-\[100\%\] {
     width: 100%;
@@ -383,6 +394,12 @@
     font-family: var(--font-primary);
     color: var(--color-backgrond);
   }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-\[0px\] {
+    gap: 0px;
+  }
   .gap-\[3px\] {
     gap: 3px;
   }
@@ -400,6 +417,15 @@
   }
   .gap-\[24px\] {
     gap: 24px;
+  }
+  .gap-\[50px\] {
+    gap: 50px;
+  }
+  .gap-\[70px\] {
+    gap: 70px;
+  }
+  .gap-\[90px\] {
+    gap: 90px;
   }
   .button {
     border-radius: 118px;
@@ -442,8 +468,14 @@
       }
     }
   }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
   .bg-amber-800 {
     background-color: var(--color-amber-800);
+  }
+  .bg-amber-950 {
+    background-color: var(--color-amber-950);
   }
   .bg-backgrond {
     background-color: var(--color-backgrond);
@@ -503,6 +535,9 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
     color: var(--color-main);
+  }
+  .text-\[4px\] {
+    font-size: 4px;
   }
   .text-\[8px\] {
     font-size: 8px;
@@ -579,6 +614,11 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .sm\:gap-\[50px\] {
+    @media (width >= 40rem) {
+      gap: 50px;
+    }
+  }
   .md\:h-\[13px\] {
     @media (width >= 48rem) {
       height: 13px;
@@ -649,6 +689,16 @@
       padding-block: 90px;
     }
   }
+  .md\:text-\[1px\] {
+    @media (width >= 48rem) {
+      font-size: 1px;
+    }
+  }
+  .md\:text-\[11px\] {
+    @media (width >= 48rem) {
+      font-size: 11px;
+    }
+  }
   .md\:text-\[12px\] {
     @media (width >= 48rem) {
       font-size: 12px;
@@ -717,14 +767,49 @@
       display: none;
     }
   }
+  .lg\:h-full {
+    @media (width >= 64rem) {
+      height: 100%;
+    }
+  }
   .lg\:w-\[70\%\] {
     @media (width >= 64rem) {
       width: 70%;
     }
   }
+  .lg\:w-full {
+    @media (width >= 64rem) {
+      width: 100%;
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:px-\[100px\] {
+    @media (width >= 64rem) {
+      padding-inline: 100px;
+    }
+  }
+  .lg\:px-\[110px\] {
+    @media (width >= 64rem) {
+      padding-inline: 110px;
+    }
+  }
+  .lg\:px-\[120px\] {
+    @media (width >= 64rem) {
+      padding-inline: 120px;
+    }
+  }
+  .lg\:px-\[130px\] {
+    @media (width >= 64rem) {
+      padding-inline: 130px;
     }
   }
   .lg\:px-\[150px\] {
@@ -737,9 +822,24 @@
       padding-block: 40px;
     }
   }
+  .lg\:py-\[100px\] {
+    @media (width >= 64rem) {
+      padding-block: 100px;
+    }
+  }
   .lg\:py-\[120px\] {
     @media (width >= 64rem) {
       padding-block: 120px;
+    }
+  }
+  .lg\:text-\[12px\] {
+    @media (width >= 64rem) {
+      font-size: 12px;
+    }
+  }
+  .lg\:text-\[14px\] {
+    @media (width >= 64rem) {
+      font-size: 14px;
     }
   }
   .lg\:text-\[16px\] {
@@ -787,6 +887,11 @@
   .xl\:grid-cols-4 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .xl\:gap-\[70px\] {
+    @media (width >= 80rem) {
+      gap: 70px;
     }
   }
   .xl\:px-\[150px\] {
