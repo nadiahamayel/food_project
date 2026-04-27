@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
@@ -286,6 +287,13 @@
     padding-block: 30px;
     text-align: center;
   }
+  .serve_items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 12px;
+    background-color: var(--color-white);
+  }
   .serveices_items {
     display: flex;
     flex-direction: column;
@@ -313,9 +321,6 @@
   }
   .inline-block {
     display: inline-block;
-  }
-  .table {
-    display: table;
   }
   .h-\[8px\] {
     height: 8px;
@@ -353,9 +358,6 @@
   .h-screen {
     height: 100vh;
   }
-  .w-\[7p\] {
-    width: 7p;
-  }
   .w-\[8px\] {
     width: 8px;
   }
@@ -364,24 +366,6 @@
   }
   .w-\[25px\] {
     width: 25px;
-  }
-  .w-\[30\%\] {
-    width: 30%;
-  }
-  .w-\[40\%\] {
-    width: 40%;
-  }
-  .w-\[50\%\] {
-    width: 50%;
-  }
-  .w-\[60\%\] {
-    width: 60%;
-  }
-  .w-\[70\%\] {
-    width: 70%;
-  }
-  .w-\[70\] {
-    width: 70;
   }
   .w-\[70px\] {
     width: 70px;
@@ -407,18 +391,6 @@
   .flex-1 {
     flex: 1;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
-  .shrink-0 {
-    flex-shrink: 0;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -435,14 +407,11 @@
   .items-center {
     align-items: center;
   }
-  .items-stretch {
-    align-items: stretch;
+  .justify-between {
+    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-items-start {
-    justify-items: start;
   }
   .gap-\[3px\] {
     gap: 3px;
@@ -452,9 +421,6 @@
   }
   .gap-\[8px\] {
     gap: 8px;
-  }
-  .gap-\[10ox\] {
-    gap: 10ox;
   }
   .gap-\[10px\] {
     gap: 10px;
@@ -488,26 +454,15 @@
       font-size: 16px;
     }
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-\[118px\] {
     border-radius: 118px;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
-  }
-  .border-r {
-    border-right-style: var(--tw-border-style);
-    border-right-width: 1px;
   }
   .border-b-1 {
     border-bottom-style: var(--tw-border-style);
@@ -538,9 +493,6 @@
   .object-cover {
     object-fit: cover;
   }
-  .p-\[20px\] {
-    padding: 20px;
-  }
   .px-\[5px\] {
     padding-inline: 5px;
   }
@@ -555,9 +507,6 @@
   }
   .py-\[8px\] {
     padding-block: 8px;
-  }
-  .py-\[10px\] {
-    padding-block: 10px;
   }
   .py-\[20px\] {
     padding-block: 20px;
@@ -638,6 +587,10 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
@@ -654,12 +607,10 @@
   .text-muted {
     color: var(--color-muted);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .sm\:gap-\[10px\] {
+    @media (width >= 40rem) {
+      gap: 10px;
+    }
   }
   .sm\:gap-\[50px\] {
     @media (width >= 40rem) {
@@ -749,6 +700,11 @@
   .md\:text-\[12px\] {
     @media (width >= 48rem) {
       font-size: 12px;
+    }
+  }
+  .md\:text-\[14px\] {
+    @media (width >= 48rem) {
+      font-size: 14px;
     }
   }
   .md\:text-\[16px\] {
@@ -926,6 +882,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .xl\:gap-\[10px\] {
+    @media (width >= 80rem) {
+      gap: 10px;
+    }
+  }
   .xl\:gap-\[70px\] {
     @media (width >= 80rem) {
       gap: 70px;
@@ -984,18 +945,12 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-leading: initial;
-      --tw-outline-style: solid;
     }
   }
 }
