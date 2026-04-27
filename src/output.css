@@ -350,6 +350,9 @@
   .h-full {
     height: 100%;
   }
+  .h-screen {
+    height: 100vh;
+  }
   .w-\[7p\] {
     width: 7p;
   }
