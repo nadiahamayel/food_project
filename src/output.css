@@ -223,6 +223,9 @@
     }
     margin-inline: auto;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .list_hover {
     display: flex;
     height: 20px;
@@ -347,6 +350,9 @@
   .h-full {
     height: 100%;
   }
+  .w-\[7p\] {
+    width: 7p;
+  }
   .w-\[8px\] {
     width: 8px;
   }
@@ -355,6 +361,27 @@
   }
   .w-\[25px\] {
     width: 25px;
+  }
+  .w-\[30\%\] {
+    width: 30%;
+  }
+  .w-\[40\%\] {
+    width: 40%;
+  }
+  .w-\[50\%\] {
+    width: 50%;
+  }
+  .w-\[60\%\] {
+    width: 60%;
+  }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[70\] {
+    width: 70;
+  }
+  .w-\[70px\] {
+    width: 70px;
   }
   .w-\[80\%\] {
     width: 80%;
@@ -373,6 +400,15 @@
   }
   .w-full {
     width: 100%;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -396,8 +432,14 @@
   .items-center {
     align-items: center;
   }
+  .items-stretch {
+    align-items: stretch;
+  }
   .justify-center {
     justify-content: center;
+  }
+  .justify-items-start {
+    justify-items: start;
   }
   .gap-\[3px\] {
     gap: 3px;
@@ -407,6 +449,9 @@
   }
   .gap-\[8px\] {
     gap: 8px;
+  }
+  .gap-\[10ox\] {
+    gap: 10ox;
   }
   .gap-\[10px\] {
     gap: 10px;
@@ -440,8 +485,14 @@
       font-size: 16px;
     }
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
   .rounded-\[118px\] {
     border-radius: 118px;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -450,6 +501,17 @@
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
+  }
+  .border-r {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 1px;
+  }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-\[\#DBDFD0\] {
+    border-color: #DBDFD0;
   }
   .button_hover {
     transition-property: .5s;
@@ -473,6 +535,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .p-\[20px\] {
+    padding: 20px;
+  }
   .px-\[5px\] {
     padding-inline: 5px;
   }
@@ -488,6 +553,12 @@
   .py-\[8px\] {
     padding-block: 8px;
   }
+  .py-\[10px\] {
+    padding-block: 10px;
+  }
+  .py-\[20px\] {
+    padding-block: 20px;
+  }
   .py-\[30px\] {
     padding-block: 30px;
   }
@@ -496,6 +567,9 @@
   }
   .py-\[60px\] {
     padding-block: 60px;
+  }
+  .pt-\[20px\] {
+    padding-top: 20px;
   }
   .text-center {
     text-align: center;
