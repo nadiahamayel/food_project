@@ -290,7 +290,7 @@
   .serve_items {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     border-radius: 12px;
     background-color: var(--color-white);
   }
@@ -321,6 +321,9 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .table {
+    display: table;
   }
   .h-\[8px\] {
     height: 8px;
@@ -391,6 +394,12 @@
   .flex-1 {
     flex: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -460,6 +469,10 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
@@ -493,6 +506,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .px-\[1\] {
+    padding-inline: 1;
+  }
   .px-\[5px\] {
     padding-inline: 5px;
   }
@@ -522,6 +538,9 @@
   }
   .pt-\[20px\] {
     padding-top: 20px;
+  }
+  .pb-\[40px\] {
+    padding-bottom: 40px;
   }
   .text-center {
     text-align: center;
@@ -606,6 +625,13 @@
   }
   .text-muted {
     color: var(--color-muted);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .sm\:gap-\[10px\] {
     @media (width >= 40rem) {
@@ -887,6 +913,11 @@
       gap: 10px;
     }
   }
+  .xl\:gap-\[20px\] {
+    @media (width >= 80rem) {
+      gap: 20px;
+    }
+  }
   .xl\:gap-\[70px\] {
     @media (width >= 80rem) {
       gap: 70px;
@@ -945,12 +976,18 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-leading: initial;
+      --tw-outline-style: solid;
     }
   }
 }

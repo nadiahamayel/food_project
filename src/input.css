@@ -83,5 +83,5 @@
     @apply font-primary text-[10px] md:text-[12px]  lg:text-[14px] font-medium;
 }
 @utility serve_items{
-    @apply flex flex-col gap-[30px]   rounded-[12px] bg-white ;
+    @apply flex flex-col gap-[15px]   rounded-[12px] bg-white ;
 }
