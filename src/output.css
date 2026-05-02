@@ -251,6 +251,29 @@
       width: 77px;
     }
   }
+  .icons_footer_right {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-muted);
+    transition-property: .5s;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-500);
+      }
+    }
+    @media (width >= 48rem) {
+      height: 27.17px;
+    }
+    @media (width >= 48rem) {
+      width: 27.17px;
+    }
+  }
   .icons_topbar_right {
     display: flex;
     height: 15px;
@@ -422,6 +445,9 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-items-center {
+    justify-items: center;
+  }
   .gap-\[3px\] {
     gap: 3px;
   }
@@ -442,6 +468,12 @@
   }
   .gap-\[24px\] {
     gap: 24px;
+  }
+  .gap-\[50px\] {
+    gap: 50px;
+  }
+  .gap-\[100px\] {
+    gap: 100px;
   }
   .button {
     border-radius: 118px;
@@ -505,9 +537,6 @@
   }
   .object-cover {
     object-fit: cover;
-  }
-  .px-\[1\] {
-    padding-inline: 1;
   }
   .px-\[5px\] {
     padding-inline: 5px;
@@ -614,6 +643,9 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
+  .text-\[\#ADB29E\] {
+    color: #ADB29E;
+  }
   .text-forground {
     color: var(--color-forground);
   }
@@ -673,9 +705,19 @@
       width: 190px;
     }
   }
+  .md\:flex-1 {
+    @media (width >= 48rem) {
+      flex: 1;
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:gap-\[0px\] {
+    @media (width >= 48rem) {
+      gap: 0px;
     }
   }
   .md\:gap-\[25px\] {
@@ -686,6 +728,11 @@
   .md\:gap-\[30px\] {
     @media (width >= 48rem) {
       gap: 30px;
+    }
+  }
+  .md\:gap-\[50px\] {
+    @media (width >= 48rem) {
+      gap: 50px;
     }
   }
   .md\:px-\[24px\] {
@@ -716,6 +763,11 @@
   .md\:py-\[90px\] {
     @media (width >= 48rem) {
       padding-block: 90px;
+    }
+  }
+  .md\:text-\[1px\] {
+    @media (width >= 48rem) {
+      font-size: 1px;
     }
   }
   .md\:text-\[11px\] {
@@ -824,6 +876,16 @@
   .lg\:grid-cols-3 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .lg\:gap-\[30px\] {
+    @media (width >= 64rem) {
+      gap: 30px;
+    }
+  }
+  .lg\:gap-\[100px\] {
+    @media (width >= 64rem) {
+      gap: 100px;
     }
   }
   .lg\:px-\[100px\] {
