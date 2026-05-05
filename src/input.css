@@ -65,13 +65,23 @@
     @apply font-medium text-[16px] leading-[24px] text-main;
 }
 @utility absolute_hero{
-    @apply absolute inset-0 flex flex-col gap-[15px] lg:gap-[30px] text-main w-[95%] md:w-[80%] lg:w-[60%] xl:w-[50%]  mx-auto text-center items-center justify-center;
+    @apply absolute inset-0 flex flex-col gap-[15px] lg:gap-[30px] text-main w-[95%] md:w-[80%] lg:w-[60%] xl:w-[60%]  mx-auto text-center items-center justify-center;
 }
+@utility hero{
+    @apply absolute inset-0 flex flex-col gap-[15px] lg:gap-[30px] text-main w-[95%] md:w-[90%] lg:w-[85%] xl:w-[80%]  mx-auto text-center items-center justify-center;
+}
+
 @utility button{
     @apply font-bold rounded-[118px] text-[10px] md:text-[16px]  border-[1.5px] text-main  py-[10px] px-[14px] md:py-[12px] md:px-[24px];
 }
+@utility button_hero{
+    @apply font-bold rounded-[118px] text-[10px] md:text-[14px]  border-[1.5px] border-[#DBDFD0] text-main  w-[150px] h-[48px]  flex items-center justify-center;
+}
 @utility button_hover{
     @apply  hover:bg-[#3f413d86] transition-[.5s] ;
+}
+@utility button_hover_red{
+    @apply  hover:bg-muted hover:text-forground transition-[.5s] ;
 }
 @utility menu_p{
     @apply font-[400] text-[16px] leading-[24px] text-menup;
