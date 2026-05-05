@@ -75,7 +75,13 @@
     @apply font-bold rounded-[118px] text-[10px] md:text-[16px]  border-[1.5px] text-main  py-[10px] px-[14px] md:py-[12px] md:px-[24px];
 }
 @utility button_hero{
-    @apply font-bold rounded-[118px] text-[10px] md:text-[14px]  border-[1.5px] border-[#DBDFD0] text-main  w-[150px] h-[48px]  flex items-center justify-center;
+    @apply font-bold rounded-[118px] text-[10px] md:text-[14px] border-[1.5px] border-[#DBDFD0] text-main w-[80px] h-[20px] md:w-[100px] md:h-[30px] lg:w-[150px] lg:h-[48px]  flex items-center justify-center;
+}
+@utility button_hero_sm{
+    @apply grid grid-cols-3 gap-[10px] ;
+}
+@utility button_hero_md{
+    @apply flex flex-row ;
 }
 @utility button_hover{
     @apply  hover:bg-[#3f413d86] transition-[.5s] ;

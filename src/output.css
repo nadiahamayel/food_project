@@ -263,8 +263,8 @@
   }
   .button_hero {
     display: flex;
-    height: 48px;
-    width: 150px;
+    height: 20px;
+    width: 80px;
     align-items: center;
     justify-content: center;
     border-radius: 118px;
@@ -276,7 +276,19 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-main);
     @media (width >= 48rem) {
+      height: 30px;
+    }
+    @media (width >= 48rem) {
+      width: 100px;
+    }
+    @media (width >= 48rem) {
       font-size: 14px;
+    }
+    @media (width >= 64rem) {
+      height: 48px;
+    }
+    @media (width >= 64rem) {
+      width: 150px;
     }
   }
   .list_hover {
@@ -348,6 +360,11 @@
     @media (width >= 48rem) {
       width: 27.17px;
     }
+  }
+  .button_hero_sm {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
   }
   .menu_items {
     display: flex;
@@ -756,6 +773,12 @@
   .md\:top-\[25\%\] {
     @media (width >= 48rem) {
       top: 25%;
+    }
+  }
+  .md\:button_hero_md {
+    @media (width >= 48rem) {
+      display: flex;
+      flex-direction: row;
     }
   }
   .md\:h-\[13px\] {
