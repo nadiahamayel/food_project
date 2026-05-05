@@ -95,6 +95,9 @@
 @utility menu_items{
     @apply flex flex-col gap-[20px] text-center items-center rounded-[12px] py-[30px] px-[24px] border-[1.5px] border-[#DBDFD0];
 }
+@utility menu_border{
+    @apply  rounded-[12px]  border-[1.5px] border-[#DBDFD0];
+}
 @utility serveices_items{
     @apply flex flex-col gap-[30px]   rounded-[12px] py-[30px] px-[24px];
 }
