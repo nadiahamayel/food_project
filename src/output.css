@@ -550,6 +550,9 @@
   .gap-\[24px\] {
     gap: 24px;
   }
+  .gap-\[30px\] {
+    gap: 30px;
+  }
   .gap-\[100px\] {
     gap: 100px;
   }
@@ -658,6 +661,9 @@
   .py-\[60px\] {
     padding-block: 60px;
   }
+  .py-\[80\] {
+    padding-block: 80;
+  }
   .py-\[80px\] {
     padding-block: 80px;
   }
@@ -678,6 +684,9 @@
   }
   .pb-\[40px\] {
     padding-bottom: 40px;
+  }
+  .pb-\[80px\] {
+    padding-bottom: 80px;
   }
   .text-center {
     text-align: center;
@@ -782,6 +791,11 @@
   .sm\:gap-\[10px\] {
     @media (width >= 40rem) {
       gap: 10px;
+    }
+  }
+  .sm\:gap-\[20px\] {
+    @media (width >= 40rem) {
+      gap: 20px;
     }
   }
   .sm\:gap-\[50px\] {
@@ -1102,6 +1116,11 @@
   .xl\:gap-\[20px\] {
     @media (width >= 80rem) {
       gap: 20px;
+    }
+  }
+  .xl\:gap-\[60px\] {
+    @media (width >= 80rem) {
+      gap: 60px;
     }
   }
   .xl\:gap-\[70px\] {
