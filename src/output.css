@@ -236,6 +236,9 @@
   .top-\[20\%\] {
     top: 20%;
   }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
   }
@@ -420,6 +423,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-\[5vh\] {
     height: 5vh;
   }
@@ -468,6 +474,9 @@
   .h-screen {
     height: 100vh;
   }
+  .max-h-px {
+    max-height: 1px;
+  }
   .w-\[8px\] {
     width: 8px;
   }
@@ -507,12 +516,22 @@
   .flex-1 {
     flex: 1;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -595,6 +614,10 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
@@ -643,6 +666,9 @@
   .object-cover {
     object-fit: cover;
   }
+  .p-75 {
+    padding: calc(var(--spacing) * 75);
+  }
   .p-\[30px\] {
     padding: 30px;
   }
@@ -657,6 +683,9 @@
   }
   .px-\[50px\] {
     padding-inline: 50px;
+  }
+  .py-75 {
+    padding-block: calc(var(--spacing) * 75);
   }
   .py-\[5px\] {
     padding-block: 5px;
@@ -676,6 +705,21 @@
   .py-\[60px\] {
     padding-block: 60px;
   }
+  .py-\[70px\] {
+    padding-block: 70px;
+  }
+  .py-\[100px\] {
+    padding-block: 100px;
+  }
+  .py-\[1000px\] {
+    padding-block: 1000px;
+  }
+  .pt-\[-50px\] {
+    padding-top: -50px;
+  }
+  .pt-\[-\] {
+    padding-top: -;
+  }
   .pt-\[20px\] {
     padding-top: 20px;
   }
@@ -685,11 +729,38 @@
   .pt-\[50px\] {
     padding-top: 50px;
   }
+  .pt-\[70px\] {
+    padding-top: 70px;
+  }
+  .pt-\[100px\] {
+    padding-top: 100px;
+  }
+  .pt-\[300px\] {
+    padding-top: 300px;
+  }
+  .pt-\[400px\] {
+    padding-top: 400px;
+  }
+  .pb-75 {
+    padding-bottom: calc(var(--spacing) * 75);
+  }
+  .pb-80 {
+    padding-bottom: calc(var(--spacing) * 80);
+  }
   .pb-\[40px\] {
     padding-bottom: 40px;
   }
+  .pb-\[80\] {
+    padding-bottom: 80;
+  }
   .pb-\[80px\] {
     padding-bottom: 80px;
+  }
+  .pb-\[300px\] {
+    padding-bottom: 300px;
+  }
+  .pb-\[400px\] {
+    padding-bottom: 400px;
   }
   .text-center {
     text-align: center;
@@ -783,6 +854,13 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .sm\:gap-\[10px\] {
     @media (width >= 40rem) {
@@ -1233,6 +1311,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1247,6 +1330,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-leading: initial;
+      --tw-outline-style: solid;
     }
   }
 }
