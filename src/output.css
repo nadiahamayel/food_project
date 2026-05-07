@@ -7,9 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-100: oklch(96.2% 0.059 95.617);
-    --color-amber-500: oklch(76.9% 0.188 70.08);
-    --color-amber-900: oklch(41.4% 0.112 45.904);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -239,9 +236,6 @@
   .top-\[20\%\] {
     top: 20%;
   }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
-  }
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
   }
@@ -426,9 +420,6 @@
   .inline-block {
     display: inline-block;
   }
-  .table {
-    display: table;
-  }
   .h-\[8px\] {
     height: 8px;
   }
@@ -452,12 +443,6 @@
   }
   .h-\[48px\] {
     height: 48px;
-  }
-  .h-\[50\%\] {
-    height: 50%;
-  }
-  .h-\[50\] {
-    height: 50;
   }
   .h-\[50px\] {
     height: 50px;
@@ -486,17 +471,8 @@
   .w-\[25px\] {
     width: 25px;
   }
-  .w-\[30\%\] {
-    width: 30%;
-  }
-  .w-\[30\] {
-    width: 30;
-  }
   .w-\[50\%\] {
     width: 50%;
-  }
-  .w-\[50\] {
-    width: 50;
   }
   .w-\[50px\] {
     width: 50px;
@@ -513,12 +489,6 @@
   .w-\[100\%\] {
     width: 100%;
   }
-  .w-\[110\%\] {
-    width: 110%;
-  }
-  .w-\[110\] {
-    width: 110;
-  }
   .w-\[140px\] {
     width: 140px;
   }
@@ -528,27 +498,8 @@
   .w-full {
     width: 100%;
   }
-  .flex-0 {
-    flex: 0;
-  }
   .flex-1 {
     flex: 1;
-  }
-  .flex-2 {
-    flex: 2;
-  }
-  .flex-\[1\.5\] {
-    flex: 1.5;
-  }
-  .flex-\[1\] {
-    flex: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .-translate-x-1 {
-    --tw-translate-x: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
@@ -556,9 +507,6 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -641,10 +589,6 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-\[1\.5px\] {
     border-style: var(--tw-border-style);
     border-width: 1.5px;
@@ -681,15 +625,6 @@
       }
     }
   }
-  .bg-amber-100 {
-    background-color: var(--color-amber-100);
-  }
-  .bg-amber-500 {
-    background-color: var(--color-amber-500);
-  }
-  .bg-amber-900 {
-    background-color: var(--color-amber-900);
-  }
   .bg-backgrond {
     background-color: var(--color-backgrond);
   }
@@ -705,9 +640,6 @@
   .p-\[30px\] {
     padding: 30px;
   }
-  .px-\[2px\] {
-    padding-inline: 2px;
-  }
   .px-\[5px\] {
     padding-inline: 5px;
   }
@@ -717,26 +649,14 @@
   .px-\[20px\] {
     padding-inline: 20px;
   }
-  .px-\[24px\] {
-    padding-inline: 24px;
-  }
   .px-\[50px\] {
     padding-inline: 50px;
-  }
-  .py-\[0px\] {
-    padding-block: 0px;
   }
   .py-\[5px\] {
     padding-block: 5px;
   }
   .py-\[8px\] {
     padding-block: 8px;
-  }
-  .py-\[10\] {
-    padding-block: 10;
-  }
-  .py-\[10px\] {
-    padding-block: 10px;
   }
   .py-\[20px\] {
     padding-block: 20px;
@@ -749,9 +669,6 @@
   }
   .py-\[60px\] {
     padding-block: 60px;
-  }
-  .py-\[70px\] {
-    padding-block: 70px;
   }
   .pt-\[20px\] {
     padding-top: 20px;
@@ -861,13 +778,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .sm\:gap-\[10px\] {
     @media (width >= 40rem) {
       gap: 10px;
@@ -974,11 +884,6 @@
       padding-block: 20px;
     }
   }
-  .md\:py-\[30px\] {
-    @media (width >= 48rem) {
-      padding-block: 30px;
-    }
-  }
   .md\:py-\[60px\] {
     @media (width >= 48rem) {
       padding-block: 60px;
@@ -992,11 +897,6 @@
   .md\:pt-\[80px\] {
     @media (width >= 48rem) {
       padding-top: 80px;
-    }
-  }
-  .md\:text-\[0px\] {
-    @media (width >= 48rem) {
-      font-size: 0px;
     }
   }
   .md\:text-\[11px\] {
@@ -1022,11 +922,6 @@
   .md\:text-\[18px\] {
     @media (width >= 48rem) {
       font-size: 18px;
-    }
-  }
-  .md\:text-\[20px\] {
-    @media (width >= 48rem) {
-      font-size: 20px;
     }
   }
   .md\:text-\[25px\] {
@@ -1117,24 +1012,9 @@
       width: 90%;
     }
   }
-  .lg\:w-\[100\%\] {
-    @media (width >= 64rem) {
-      width: 100%;
-    }
-  }
-  .lg\:w-\[100\] {
-    @media (width >= 64rem) {
-      width: 100;
-    }
-  }
   .lg\:w-\[100px\] {
     @media (width >= 64rem) {
       width: 100px;
-    }
-  }
-  .lg\:w-\[full\] {
-    @media (width >= 64rem) {
-      width: full;
     }
   }
   .lg\:w-full {
@@ -1244,11 +1124,6 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
-  .xl\:gap-\[0px\] {
-    @media (width >= 80rem) {
-      gap: 0px;
-    }
-  }
   .xl\:gap-\[10px\] {
     @media (width >= 80rem) {
       gap: 10px;
@@ -1257,11 +1132,6 @@
   .xl\:gap-\[20px\] {
     @media (width >= 80rem) {
       gap: 20px;
-    }
-  }
-  .xl\:gap-\[30px\] {
-    @media (width >= 80rem) {
-      gap: 30px;
     }
   }
   .xl\:gap-\[70px\] {
@@ -1357,11 +1227,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1376,7 +1241,6 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-leading: initial;
-      --tw-outline-style: solid;
     }
   }
 }
