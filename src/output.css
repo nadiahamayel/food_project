@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-white: #fff;
@@ -773,6 +774,9 @@
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
+  .bg-amber-600 {
+    background-color: var(--color-amber-600);
+  }
   .bg-amber-700 {
     background-color: var(--color-amber-700);
   }
@@ -1357,6 +1361,11 @@
       height: 100%;
     }
   }
+  .lg\:w-\[0\%\] {
+    @media (width >= 64rem) {
+      width: 0%;
+    }
+  }
   .lg\:w-\[45\%\] {
     @media (width >= 64rem) {
       width: 45%;
@@ -1375,6 +1384,11 @@
   .lg\:w-\[90\%\] {
     @media (width >= 64rem) {
       width: 90%;
+    }
+  }
+  .lg\:w-\[100\%\] {
+    @media (width >= 64rem) {
+      width: 100%;
     }
   }
   .lg\:w-\[100px\] {
@@ -1527,6 +1541,11 @@
   .xl\:px-\[150px\] {
     @media (width >= 80rem) {
       padding-inline: 150px;
+    }
+  }
+  .xl\:text-\[90px\] {
+    @media (width >= 80rem) {
+      font-size: 90px;
     }
   }
   .xl\:text-\[100px\] {
