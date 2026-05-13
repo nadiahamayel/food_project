@@ -1341,6 +1341,11 @@
       display: block;
     }
   }
+  .lg\:grid {
+    @media (width >= 64rem) {
+      display: grid;
+    }
+  }
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
@@ -1506,6 +1511,11 @@
     @media (width >= 64rem) {
       --tw-leading: 70px;
       line-height: 70px;
+    }
+  }
+  .xl\:grid {
+    @media (width >= 80rem) {
+      display: grid;
     }
   }
   .xl\:w-\[50px\] {
