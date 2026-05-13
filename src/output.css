@@ -736,9 +736,20 @@
     border-style: var(--tw-border-style);
     border-width: 1.5px;
   }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-t-\[1px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
   .border-b-1 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+  }
+  .border-\[\#414536\] {
+    border-color: #414536;
   }
   .border-\[\#DBDFD0\] {
     border-color: #DBDFD0;
